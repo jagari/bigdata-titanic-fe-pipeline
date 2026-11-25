@@ -1,0 +1,95 @@
+{
+  "gridsearch": [
+    {
+      "모델": "Logistic Regression",
+      "튜닝 전 CV AUC": 0.8693,
+      "튜닝 후 CV AUC": 0.8693,
+      "튜닝 전 Test AUC": 0.864,
+      "튜닝 후 Test AUC": 0.8646,
+      "튜닝 후 Accuracy": 0.8101,
+      "튜닝 후 Precision": 0.7692,
+      "튜닝 후 Recall": 0.7246,
+      "튜닝 후 F1": 0.7463,
+      "최적 하이퍼파라미터": "{'clf__C': 1.0, 'select__max_features': 12}"
+    },
+    {
+      "모델": "Random Forest",
+      "튜닝 전 CV AUC": 0.886,
+      "튜닝 후 CV AUC": 0.891,
+      "튜닝 전 Test AUC": 0.8404,
+      "튜닝 후 Test AUC": 0.8489,
+      "튜닝 후 Accuracy": 0.7821,
+      "튜닝 후 Precision": 0.7344,
+      "튜닝 후 Recall": 0.6812,
+      "튜닝 후 F1": 0.7068,
+      "최적 하이퍼파라미터": "{'clf__max_depth': 10, 'clf__min_samples_leaf': 4, 'clf__n_estimators': 150, 'select__max_features': 12}"
+    },
+    {
+      "모델": "XGBoost",
+      "튜닝 전 CV AUC": 0.8949,
+      "튜닝 후 CV AUC": 0.8984,
+      "튜닝 전 Test AUC": 0.843,
+      "튜닝 후 Test AUC": 0.8495,
+      "튜닝 후 Accuracy": 0.7877,
+      "튜닝 후 Precision": 0.7541,
+      "튜닝 후 Recall": 0.6667,
+      "튜닝 후 F1": 0.7077,
+      "최적 하이퍼파라미터": "{'clf__colsample_bytree': 0.85, 'clf__learning_rate': 0.03, 'clf__max_depth': 4, 'clf__n_estimators': 200, 'clf__subsample': 0.85, 'select__max_features': 20}"
+    },
+    {
+      "모델": "LightGBM",
+      "튜닝 전 CV AUC": 0.8856,
+      "튜닝 후 CV AUC": 0.8935,
+      "튜닝 전 Test AUC": 0.8402,
+      "튜닝 후 Test AUC": 0.8337,
+      "튜닝 후 Accuracy": 0.7877,
+      "튜닝 후 Precision": 0.7541,
+      "튜닝 후 Recall": 0.6667,
+      "튜닝 후 F1": 0.7077,
+      "최적 하이퍼파라미터": "{'clf__learning_rate': 0.1, 'clf__max_depth': 3, 'clf__n_estimators': 200, 'clf__num_leaves': 15, 'select__max_features': 20}"
+    }
+  ],
+  "automl": [
+    {
+      "비교 방식": "FLAML AutoML (원본 변수만 사용, Best=xgboost)",
+      "CV ROC-AUC": 0.8809,
+      "Test Accuracy": 0.8156,
+      "Test Precision": 0.8103,
+      "Test Recall": 0.6812,
+      "Test F1": 0.7402,
+      "Test ROC-AUC": 0.8385
+    },
+    {
+      "비교 방식": "FLAML AutoML (도메인 파생변수 결합, Best=xgboost)",
+      "CV ROC-AUC": 0.8832,
+      "Test Accuracy": 0.7821,
+      "Test Precision": 0.7344,
+      "Test Recall": 0.6812,
+      "Test F1": 0.7068,
+      "Test ROC-AUC": 0.8325
+    },
+    {
+      "비교 방식": "수동 설계 FE Pipeline + GridSearchCV (XGBoost)",
+      "CV ROC-AUC": 0.8984,
+      "Test Accuracy": 0.7877,
+      "Test Precision": 0.7541,
+      "Test Recall": 0.6667,
+      "Test F1": 0.7077,
+      "Test ROC-AUC": 0.8495
+    }
+  ],
+  "automl_raw_best_estimator": "xgboost",
+  "automl_fe_best_estimator": "xgboost",
+  "top_10_consensus_features": {
+    "Title_Mr": 0.9402,
+    "Sex_female": 0.8353,
+    "Sex_male": 0.6307,
+    "Pclass": 0.574,
+    "Age": 0.5038,
+    "FarePerPerson": 0.5012,
+    "Fare": 0.4415,
+    "FamilySize": 0.399,
+    "Deck_U": 0.2257,
+    "Title_Mrs": 0.1838
+  }
+}

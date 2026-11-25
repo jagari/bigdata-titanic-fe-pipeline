@@ -1,0 +1,60 @@
+{
+  "n_train": 712,
+  "n_test": 179,
+  "top_12_features": {
+    "Sex_female": 0.1192,
+    "Sex_male": 0.1191,
+    "Title_Mr": 0.1126,
+    "FarePerPerson": 0.1,
+    "Fare": 0.0952,
+    "Age": 0.0791,
+    "Pclass": 0.0528,
+    "FamilySize": 0.0417,
+    "Deck_U": 0.0331,
+    "Title_Mrs": 0.0316,
+    "HasCabin": 0.0283,
+    "Title_Miss": 0.0274
+  },
+  "mandatory_best_by_test_auc": [
+    {
+      "실험": "Exp-1",
+      "모델": "Logistic Regression",
+      "test_accuracy": 0.8324022346368715,
+      "test_f1": 0.7761194029850746,
+      "test_roc_auc": 0.8704874835309617,
+      "cv_roc_auc_mean": 0.8674401538899972
+    },
+    {
+      "실험": "Exp-4 (최적 제안)",
+      "모델": "Logistic Regression",
+      "test_accuracy": 0.8100558659217877,
+      "test_f1": 0.746268656716418,
+      "test_roc_auc": 0.8640316205533596,
+      "cv_roc_auc_mean": 0.8686552832399228
+    },
+    {
+      "실험": "Exp-3",
+      "모델": "Logistic Regression",
+      "test_accuracy": 0.8156424581005587,
+      "test_f1": 0.7555555555555555,
+      "test_roc_auc": 0.8590250329380763,
+      "cv_roc_auc_mean": 0.8666582359646624
+    },
+    {
+      "실험": "Exp-2",
+      "모델": "Logistic Regression",
+      "test_accuracy": 0.8044692737430168,
+      "test_f1": 0.7368421052631579,
+      "test_roc_auc": 0.8508563899868248,
+      "cv_roc_auc_mean": 0.8542656449553002
+    },
+    {
+      "실험": "Exp-1",
+      "모델": "Random Forest",
+      "test_accuracy": 0.8100558659217877,
+      "test_f1": 0.7384615384615385,
+      "test_roc_auc": 0.8480895915678524,
+      "cv_roc_auc_mean": 0.8860230703059857
+    }
+  ]
+}

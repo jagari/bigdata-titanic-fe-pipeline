@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.DS_Store
+*.log
+catboost_info/
+flaml.log
+report/*.html
+report/page_*.png
